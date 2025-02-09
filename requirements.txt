@@ -1,0 +1,12 @@
+streamlit
+asyncio
+os
+requests
+subprocess
+mimetypes
+dotenv
+deepgram-sdk
+langchain-groq
+langchain-core
+deep-translator
+whisper
