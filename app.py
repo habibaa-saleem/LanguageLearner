@@ -4,7 +4,6 @@ import os
 import requests
 import subprocess
 import mimetypes
-from dotenv import load_dotenv
 from deepgram import DeepgramClient
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
@@ -13,9 +12,12 @@ from langchain.chains import LLMChain
 from deep_translator import GoogleTranslator
 import whisper
 
-# Load environment 
-GROQ_API_KEY = ""
-DEEPGRAM_API_KEY = ""
+import streamlit as st
+
+# Load API keys from secrets
+GROQ_API_KEY = st.secrets["general"]["GROQ_API_KEY"]
+DEEPGRAM_API_KEY = st.secrets["general"]["DEEPGRAM_API_KEY"]
+
 if not GROQ_API_KEY or not DEEPGRAM_API_KEY:
     st.error("❌ Missing API keys. Please set them in the script.")
     st.stop()

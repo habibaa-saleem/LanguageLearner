@@ -1,12 +1,10 @@
 streamlit
-asyncio
-os
 requests
-subprocess
-mimetypes
-dotenv
+python-dotenv
 deepgram-sdk
 langchain-groq
 langchain-core
 deep-translator
-whisper
+openai-whisper
+ffmpeg
+langchain
